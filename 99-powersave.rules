@@ -1,0 +1,2 @@
+SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="/usr/bin/throttle powersave", RUN+="/usr/bin/systemctl start low-battery.timer"
+SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/usr/bin/throttle performance", RUN+="/usr/bin/systemctl stop low-battery.timer"

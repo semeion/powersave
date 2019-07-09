@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case $1 in
+    pre) /path/to/your/script false ;;
+    post)
+        if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1; then
+            /usr/bin/throttle powersave
+        else
+    		/usr/bin/throttle performance
+        fi
+    ;;
+esac
+exit 0

@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs low-battery every 5 minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Unit=low-battery.service
+
+[Install]
+WantedBy=multi-user.target
