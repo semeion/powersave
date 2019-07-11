@@ -6,12 +6,12 @@ Added modifications to Dell Inspiron 15 Serie 5000 (i15-5558-B30), and some extr
 
 ## Intall on paths:
 ```
-/usr/lib/systemd/system-sleep/00-powersave"
-/etc/udev/rules.d/99-powersave.rules"
-/usr/bin/low-battery"
-/usr/lib/systemd/system/low-battery.service"
-/usr/lib/systemd/system/low-battery.timer"
-/usr/bin/throttle"
+/usr/lib/systemd/system-sleep/00-powersave
+/etc/udev/rules.d/99-powersave.rules
+/usr/bin/low-battery
+/usr/lib/systemd/system/low-battery.service
+/usr/lib/systemd/system/low-battery.timer
+/usr/bin/throttle
 ```
 
 ## Archlinux
