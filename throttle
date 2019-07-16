@@ -14,16 +14,16 @@ while (( "$#" )); do
     full|performance|true|1|cut|powersave|false|0)
       case "${1}" in
         full|performance|false|0)
-          HYPERTHREADS="1"                 # default=1
+          HYPERTHREADS="1"                  # default=1
           GOVERNOR="performance"           # default=powersave / throttle recommend "performance"
-          XPSTURBO="0"                     # default=0
+          XPSTURBO="0"                      # default=0
           ENERGYPERF="normal"              # default=normal / throttle recommend "performance"
           read -r BACKLIGHT < /var/lib/systemd/backlight/pci-0000\:00\:02.0\:backlight\:intel_backlight || BACKLIGHT="30"
           LAPTOP="0"                       # default=0
           DIRTYWBC="500"                   # default=500
           NMIDOG="0"                       # default=1
-          POLICY="max_performance"         # default=max_performance
-          APM="128"                        # default=128 / throttle recommended 255
+          POLICY="max_performance"        # default=max_performance
+          APM="254"                        # default=128 / throttle recommended 255 - Possible values are between 1 and 255, low values mean more aggressive power management and higher values mean better performance. Values from 1 to 127 permit spin-down, whereas values from 128 to 254 do not. A value of 255 completely disables the feature. 
           AAM="0"                          # default=0 on PC (not supported on dell) / throttle recommended 254
           CONTROL="auto"                   # auto/on (mix)
           AUTOSUSPEND="-1"                 # ?
