@@ -17,7 +17,7 @@ while (( "$#" )); do
           HYPERTHREADS="1"                  # default=1
           GOVERNOR="performance"           # default=powersave / throttle recommend "performance"
           XPSTURBO="0"                      # default=0
-          ENERGYPERF="normal"              # default=normal / throttle recommend "performance"
+          ENERGYPERF="performance"        # default=normal / throttle recommend "performance"
           read -r BACKLIGHT < /var/lib/systemd/backlight/pci-0000\:00\:02.0\:backlight\:intel_backlight || BACKLIGHT="30"
           LAPTOP="0"                       # default=0
           DIRTYWBC="500"                   # default=500
