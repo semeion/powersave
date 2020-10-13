@@ -15,27 +15,27 @@ while (( "$#" )); do
       case "${1}" in
         full|performance|false|0)
           HYPERTHREADS="1"                  # default=1
-          GOVERNOR="performance"           # default=powersave / throttle recommend "performance"
+          GOVERNOR="performance"            # default=powersave / throttle recommend "performance"
           XPSTURBO="0"                      # default=0
-          ENERGYPERF="performance"        # default=normal / throttle recommend "performance"
+          ENERGYPERF="performance"          # default=normal / throttle recommend "performance"
           read -r BACKLIGHT < /var/lib/systemd/backlight/pci-0000\:00\:02.0\:backlight\:intel_backlight || BACKLIGHT="30"
-          LAPTOP="0"                       # default=0
-          DIRTYWBC="500"                   # default=500
-          NMIDOG="0"                       # default=1
-          POLICY="max_performance"        # default=max_performance
-          APM="254"                        # default=128 / throttle recommended 255 - Possible values are between 1 and 255, low values mean more aggressive power management and higher values mean better performance. Values from 1 to 127 permit spin-down, whereas values from 128 to 254 do not. A value of 255 completely disables the feature. 
-          AAM="0"                          # default=0 on PC (not supported on dell) / throttle recommended 254
-          CONTROL="auto"                   # auto/on (mix)
-          AUTOSUSPEND="-1"                 # ?
-          DISKAUTOSUSPEND="-1"             # default=-1
-          POWERSAVE="0"                    # default=0
-          CONTROLLER="Y"                   # default=Y
-          WLPOWERSAVE="off"                # default=off
-          WOLA="g"                         # ?
-          WOLB="enabled"                   # ?
-          LEDBRIGHT="0"                    # default=0 (mix)
-          DPMS="600"                       # 600=10 min (blank screen), min=60 secs / dependencies: sudo, stat, xset
-          NVPM="1"                         # Nvidia thing
+          LAPTOP="0"                        # default=0
+          DIRTYWBC="500"                    # default=500
+          NMIDOG="0"                        # default=1
+          POLICY="max_performance"          # default=max_performance
+          APM="254"                         # default=128 / throttle recommended 255 - Possible values are between 1 and 255, low values mean more aggressive power management and higher values mean better performance. Values from 1 to 127 permit spin-down, whereas values from 128 to 254 do not. A value of 255 completely disables the feature. 
+          AAM="0"                           # default=0 on PC (not supported on dell) / throttle recommended 254
+          CONTROL="auto"                    # auto/on (mix)
+          AUTOSUSPEND="-1"                  # ?
+          DISKAUTOSUSPEND="-1"              # default=-1
+          POWERSAVE="0"                     # default=0
+          CONTROLLER="Y"                    # default=Y
+          WLPOWERSAVE="off"                 # default=off
+          WOLA="g"                          # ?
+          WOLB="enabled"                    # ?
+          LEDBRIGHT="0"                     # default=0 (mix)
+          DPMS="600"                        # 600=10 min (blank screen), min=60 secs / dependencies: sudo, stat, xset
+          NVPM="1"                          # Nvidia thing
           [[ "$MODULES" ]] && \
             for i in "${MODULES[@]}"; do
               modprobe "$i" &>/dev/null ; done &
@@ -52,12 +52,12 @@ while (( "$#" )); do
           LAPTOP="5"                        # LAPTOP="5" to activate
           DIRTYWBC="1500"                   # 1500 on laptop mode
           NMIDOG="0"
-          POLICY="med_power_with_dipm"     # min_power
-          APM="128"                        # 1
-          AAM="0"                          # 128
+          POLICY="med_power_with_dipm"      # min_power
+          APM="128"                         # 1
+          AAM="0"                           # 128
           CONTROL="auto"
-          AUTOSUSPEND="1"                  # 1
-          DISKAUTOSUSPEND="-1"             # 60000
+          AUTOSUSPEND="1"                   # 1
+          DISKAUTOSUSPEND="-1"              # 60000
           POWERSAVE="1"
           CONTROLLER="Y"
           WLPOWERSAVE="on"
