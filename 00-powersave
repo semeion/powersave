@@ -3,7 +3,7 @@
 case $1 in
     pre) /usr/bin/throttle performance ;;
     post)
-        if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1; then
+        if </sys/class/power_supply/AC/online grep 0 > /dev/null 2>&1; then
             /usr/bin/throttle powersave
         else
     		/usr/bin/throttle performance

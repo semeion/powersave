@@ -1,0 +1,26 @@
+HYPERTHREADS="on"              # default="on"
+GOVERNOR="performance"
+XPSTURBO="0"
+PCIEASPMPOL="performance"
+ENERGYPERF="0"
+BACKLIGHT="saved"              # saved=restore last backlight
+LAPTOP="0"                     # default=0
+DIRTYWBC="500"                 # default=500
+DIRTYEXP="3000"                # default=3000
+NMIDOG="0"                     # default=1
+POLICY="max_performance"       # default=max_performance
+APM="254"                      # default=128 / throttle recommended 255 - Possible values are between 1 and 255, low values mean more aggressive power management and higher values mean better performance. Values from 1 to 127 permit spin-down, whereas values from 128 to 254 do not. A value of 255 completely disables the feature. 
+AAM="0"                        # default=0 on PC (not supported on dell) / throttle recommended 254
+CONTROL="on"
+AUTOSUSPEND="-1"
+DISKAUTOSUSPEND="-1"           # default=-1
+POWERSAVE="0"
+CONTROLLER="N"
+WLPOWERSAVE="off"
+WOLA="g"
+WOLB="enabled"
+LEDBRIGHT="255"
+LEDSKIP=(capslock numlock scrolllock kbd_backlight mmc0)    #Leds to skip
+DPMS="600"                     # 600=10 min (blank screen), min=60 secs / dependencies: sudo, stat, xset
+NVPM="1"                       # Nvidia thing
+vid_pid="06CB:75BF"            # Exclude VID:PID from power management (06CB:75BF DELL Touchpad)

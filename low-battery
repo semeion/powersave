@@ -1,15 +1,15 @@
 #!/bin/sh
-if [ -z "$1" ] || [ "$1" -lt 1 -o "$1" -gt 100 ]; then
+if [ -z "$1" ] || [ "$1" -lt 1 ] || [ "$1" -gt 100 ]; then
   echo "Usage: $0 [1-100]"
   echo "   If battery percentage <= provided percentage, then suspend the system."
   exit
 fi
 
-read -r status < /sys/class/power_supply/BAT0/status
-read -r capacity < /sys/class/power_supply/BAT0/capacity
+read -r status </sys/class/power_supply/BAT0/status
+read -r capacity </sys/class/power_supply/BAT0/capacity
 
-if [ "$status" == "Discharging" ] && [ "$capacity" -le "$1" ]; then
-  logger "Critical battery threshold... Executing: systemctl hibernate"
+if [ "$status" = "Discharging" ] && [ "$capacity" -le "$1" ]; then
+  logger "Critical battery threshold... Executing: systemctl hibernate!"
   systemctl hibernate
   #systemctl hybrid-sleep
   #systemctl suspend

@@ -1,0 +1,26 @@
+HYPERTHREADS="off"
+GOVERNOR="powersave"
+XPSTURBO="1"
+PCIEASPMPOL="powersupersave"
+ENERGYPERF="15"
+BACKLIGHT="1"
+LAPTOP="5"                     # LAPTOP="5" to activate
+DIRTYWBC="1500"                # 1500 on laptop mode
+DIRTYEXP="3000"                # default=3000
+NMIDOG="0"
+POLICY="med_power_with_dipm"   # min_power
+APM="128"                      # 1
+AAM="0"                        # 128
+CONTROL="auto"
+AUTOSUSPEND="1"
+DISKAUTOSUSPEND="-1"           # 60000
+POWERSAVE="1"
+CONTROLLER="Y"
+WLPOWERSAVE="on"
+WOLA="d"
+WOLB="disabled"
+LEDBRIGHT="0"
+LEDSKIP=(capslock numlock scrolllock kbd_backlight mmc0)    #Leds to skip
+DPMS="300"
+NVPM="0"
+vid_pid="06CB:75BF"            # Exclude VID:PID from power management (06CB:75BF DELL Touchpad)
